@@ -82,14 +82,16 @@ main {
   margin-bottom: 10px;
 }
 
-.card button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #e91e63;
-  color: white;
-  font-weight: bold;
+..card .button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #e91e63;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
 }
 
 footer {
@@ -128,9 +130,7 @@ footer {
     <div class="card" id="ingles">
       <h3>🇺🇸 Inglês</h3>
       <p>Aprenda palavras, frases, gramática e conversação.</p>
-      <button onclick="alert('Aulas de Inglês em breve!')">
-        Começar
-      </button>
+      <a href="ingles.html" class="button">Começar</a>
     </div>
 
     <div class="card" id="espanhol">
