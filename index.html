@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashidiomas</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5fb;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 8px;
+}
+
+nav {
+  background: white;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+nav a {
+  color: #9c27b0;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px 15px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 12px #ddd;
+}
+
+.card h3 {
+  color: #9c27b0;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #e91e63;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background: #9c27b0;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌸 Ashidiomas 🌸</h1>
+  <p>Aprenda idiomas de forma simples e divertida!</p>
+</header>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#ingles">Inglês</a>
+  <a href="#espanhol">Espanhol</a>
+  <a href="#frances">Francês</a>
+</nav>
+
+<main id="inicio">
+
+  <section class="welcome">
+    <h2>Bem-vindo ao Ashidiomas! 💕</h2>
+    <p>Escolha um idioma e comece seus estudos.</p>
+  </section>
+
+  <section class="cards">
+
+    <div class="card" id="ingles">
+      <h3>🇺🇸 Inglês</h3>
+      <p>Aprenda palavras, frases, gramática e conversação.</p>
+      <button onclick="alert('Aulas de Inglês em breve!')">
+        Começar
+      </button>
+    </div>
+
+    <div class="card" id="espanhol">
+      <h3>🇪🇸 Espanhol</h3>
+      <p>Aprenda espanhol de maneira fácil e divertida.</p>
+      <button onclick="alert('Aulas de Espanhol em breve!')">
+        Começar
+      </button>
+    </div>
+
+    <div class="card" id="frances">
+      <h3>🇫🇷 Francês</h3>
+      <p>Comece do zero e aprenda suas primeiras palavras.</p>
+      <button onclick="alert('Aulas de Francês em breve!')">
+        Começar
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>🌸 Ashidiomas © 2026</p>
+  <p>Aprender idiomas pode ser divertido!</p>
+</footer>
+
+</body>
+</html>
