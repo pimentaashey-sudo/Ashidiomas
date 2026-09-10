@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f43f8f">
+  <title>Ash Idiomas — Inglês</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap');
+
+:root{
+  --pink:#f43f8f;
+  --pink2:#ff79ad;
+  --light:#fff5fa;
+  --card:#ffffff;
+  --text:#283044;
+  --muted:#7d8292;
+  --line:#f0dce7;
+  --shadow:0 8px 24px rgba(244,63,143,.12);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:linear-gradient(135deg,#fff0f7,#ffe1ef);
+  font-family:"DM Sans",sans-serif;color:var(--text);
+}
+button{font:inherit;border:0;cursor:pointer}
+#app{min-height:100vh}
+.phone{
+  width:min(100%,430px);min-height:100vh;margin:auto;background:var(--light);
+  position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,0,0,.08)
+}
+.screen{padding:24px 18px 92px;min-height:100vh}
+.logo{font-family:Pacifico,cursive;color:var(--pink);font-size:25px}
+.heart{color:var(--pink)}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.title{font-size:24px;font-weight:700;margin:8px 0}
+.subtitle{color:var(--muted);margin:0 0 18px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:16px;box-shadow:var(--shadow);margin:12px 0
+}
+.primary{
+  width:100%;padding:14px 18px;border-radius:14px;background:var(--pink);
+  color:white;font-weight:700
+}
+.secondary{
+  width:100%;padding:13px 18px;border-radius:14px;background:#fff;
+  color:var(--pink);border:1px solid #f6b8d3;font-weight:700
+}
+.center{text-align:center}
+.splash{
+  min-height:100vh;padding:45px 25px;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  background:radial-gradient(circle at 50% 25%,#ffd5e8,#fff5fa 58%)
+}
+.big-heart{font-size:76px;line-height:1;margin-bottom:10px}
+.splash h1{font-family:Pacifico,cursive;color:var(--pink);font-size:54px;line-height:1;margin:0}
+.splash p{color:#777;margin:15px 0 30px}
+.lang-card{display:flex;align-items:center;gap:14px}
+.flag{font-size:40px}.lang-card strong{display:block}.lang-card small{color:var(--muted)}
+.chev{margin-left:auto;color:var(--pink);font-size:25px}
+.bottom{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:min(100%,430px);height:70px;background:#fff;border-top:1px solid var(--line);
+  display:flex;justify-content:space-around;z-index:20
+}
+.navbtn{background:none;color:#9b9eaa;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:3px}
+.navbtn.active{color:var(--pink);font-weight:700}.navicon{font-size:21px}
+.level{display:flex;gap:13px;align-items:center}
+.level .emoji{font-size:30px}
+.progressbar{height:8px;background:#f4dce8;border-radius:10px;overflow:hidden}
+.progressbar span{display:block;height:100%;background:var(--pink);border-radius:10px}
+.unit{display:flex;align-items:center;gap:12px}
+.unitnum{
+  width:38px;height:38px;border-radius:50%;background:#ffe0ec;color:var(--pink);
+  display:grid;place-items:center;font-weight:700
+}
+.unit small{color:var(--muted)}
+.tabs{display:flex;background:white;border:1px solid var(--line);border-radius:13px;padding:3px;margin-bottom:16px}
+.tabs button{flex:1;padding:10px;background:none;border-radius:10px;color:var(--muted)}
+.tabs button.active{background:var(--pink);color:white}
+.lesson-text h3{color:var(--pink)}
+.example{background:#fff0f6;border-left:4px solid var(--pink);padding:12px;border-radius:10px;margin:12px 0}
+.option{
+  display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);
+  padding:14px;border-radius:13px;margin:9px 0
+}
+.option.selected{border:2px solid var(--pink);background:#fff0f6}
+.option.correct{border-color:#36b37e;background:#effbf5}
+.option.wrong{border-color:#e85d75;background:#fff0f2}
+.flash{
+  min-height:330px;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center
+}
+.flash .word{font-size:34px;font-weight:700}.flash .pron{color:var(--muted)}
+.flash .translation{font-size:23px;margin-top:35px;color:var(--pink)}
+.vocab-row{display:flex;align-items:center;gap:13px}
+.vocab-icon{font-size:30px}.vocab-row small{display:block;color:var(--muted)}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{text-align:center}.stat strong{font-size:25px;color:var(--pink);display:block}
+.achievement{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center}
+.badge{width:52px;height:52px;border-radius:50%;background:#ffe1ed;display:grid;place-items:center;font-size:26px}
+.profile-row{display:flex;align-items:center;gap:13px;padding:15px 0;border-bottom:1px solid var(--line)}
+.avatar{width:50px;height:50px;border-radius:50%;background:#ffd3e5;display:grid;place-items:center;font-size:24px}
+.notice{padding:13px;border-radius:12px;background:#fff0f6;color:#b42f68;font-size:13px}
+.back{background:none;font-size:25px;color:var(--text)}
+@media(min-width:700px){body{padding:20px}.phone{border-radius:28px;min-height:850px}}
+
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+const app=document.getElementById("app");
+
+const state={
+  page:"home", lesson:null, flashIndex:0, selected:null,
+  completed: Number(localStorage.getItem("ash_completed")||0),
+  streak: Number(localStorage.getItem("ash_streak")||1),
+  xp: Number(localStorage.getItem("ash_xp")||0)
+};
+
+const vocab=[
+  ["🏠","house","/haʊs/","casa"],["🍞","bread","/bred/","pão"],["💧","water","/ˈwɔːtər/","água"],
+  ["☕","coffee","/ˈkɔːfi/","café"],["🥛","milk","/mɪlk/","leite"],["🍎","apple","/ˈæpəl/","maçã"],
+  ["🍊","orange","/ˈɔːrɪndʒ/","laranja"],["👩","woman","/ˈwʊmən/","mulher"],
+  ["👨","man","/mæn/","homem"],["📚","book","/bʊk/","livro"]
+];
+
+const units=[
+  ["Primeiros passos","5 tópicos"],["Pessoas e coisas","5 tópicos"],["Vida cotidiana","5 tópicos"],
+  ["No tempo e no espaço","5 tópicos"],["Rotina e hábitos","5 tópicos"],["Alimentação","5 tópicos"]
+];
+
+const questions=[
+  {q:"She ____ coffee every morning.",a:["drink","drinks","drinking","drik"],c:1},
+  {q:"I ____ from Brazil.",a:["am","is","are","be"],c:0},
+  {q:"They ____ happy.",a:["is","am","are","be"],c:2},
+  {q:"He ____ a book.",a:["read","reads","reading","to read"],c:1},
+  {q:"We ____ English.",a:["study","studies","studying","studys"],c:0}
+];
+
+function save(){localStorage.setItem("ash_completed",state.completed);localStorage.setItem("ash_xp",state.xp);localStorage.setItem("ash_streak",state.streak)}
+function nav(){
+  return `<nav class="bottom">
+    <button class="navbtn ${state.page==='home'?'active':''}" onclick="go('home')"><span class="navicon">⌂</span>Início</button>
+    <button class="navbtn ${state.page==='course'?'active':''}" onclick="go('course')"><span class="navicon">📖</span>Curso</button>
+    <button class="navbtn ${state.page==='flash'?'active':''}" onclick="go('flash')"><span class="navicon">🃏</span>Flashcards</button>
+    <button class="navbtn ${state.page==='exercise'?'active':''}" onclick="go('exercise')"><span class="navicon">✎</span>Exercícios</button>
+    <button class="navbtn ${state.page==='progress'?'active':''}" onclick="go('progress')"><span class="navicon">▥</span>Progresso</button>
+  </nav>`;
+}
+function shell(content){app.innerHTML=`<main class="phone"><section class="screen">${content}</section>${nav()}</main>`}
+function go(p){state.page=p;state.selected=null;render()}
+function render(){
+ if(state.page==="home") home();
+ else if(state.page==="course") course();
+ else if(state.page==="level") level();
+ else if(state.page==="unit") unit();
+ else if(state.page==="lesson") lesson();
+ else if(state.page==="flash") flash();
+ else if(state.page==="vocab") vocabulary();
+ else if(state.page==="exercise") exercise();
+ else if(state.page==="progress") progress();
+ else if(state.page==="achievements") achievements();
+ else if(state.page==="profile") profile();
+}
+function home(){
+ shell(`<div class="top"><div class="logo">♥ Ash Idiomas</div><div>♡</div></div>
+ <h1 class="title">Olá! <span class="heart">♥</span></h1><p class="subtitle">Que bom te ver por aqui!</p>
+ <h3>Qual idioma você quer aprender?</h3>
+ <div class="card lang-card" onclick="go('level')" style="cursor:pointer"><span class="flag">🇺🇸</span><div><strong>Inglês</strong><small>Learn English</small></div><span class="chev">›</span></div>
+ <div class="card center"><b style="color:var(--pink)">Aprender inglês é abrir portas para um mundo de possibilidades! ♥</b></div>
+ <div class="card"><b>🔥 Ofensiva de ${state.streak} dia${state.streak>1?'s':''}</b><p class="subtitle">Continue estudando para manter sua ofensiva.</p><div class="progressbar"><span style="width:${Math.min(100,state.streak*14)}%"></span></div></div>
+ <div class="card" onclick="go('profile')" style="cursor:pointer"><b>👤 Meu perfil</b><p class="subtitle">Seu progresso fica salvo neste aparelho.</p></div>`);
+}
+function header(title,back="home"){return `<div class="top"><button class="back" onclick="go('${back}')">‹</button><b>${title}</b><span>♡</span></div>`}
+function level(){
+ shell(`${header("🇺🇸 Inglês")}
+ <h1 class="title">Qual é o seu nível?</h1><p class="subtitle">Escolha o nível que melhor se encaixa em você.</p>
+ ${["A1|Iniciante|🌱|Comece do zero e aprenda os fundamentos.","A2|Básico|📊|Desenvolva seu conhecimento e aprenda estruturas mais avançadas."].map(x=>{let [a,b,e,d]=x.split("|");return `<div class="card level" onclick="go('course')" style="cursor:pointer"><span class="emoji">${e}</span><div><b style="color:var(--pink);font-size:20px">${a}</b><strong>${b}</strong><small>${d}</small></div><span class="chev">›</span></div>`}).join("")}
+ <div class="card center">🔎 <b>Não sei meu nível</b><p class="subtitle">Faça um teste de nivelamento.</p></div>`);
+}
+function course(){
+ const pct=Math.round(state.completed/30*100);
+ shell(`${header("🇺🇸 Inglês A1")}
+ <div class="tabs"><button class="active">Gramática</button><button onclick="go('vocab')">Vocabulário</button><button onclick="go('exercise')">Testes</button></div>
+ <div class="top"><h2>Unidades do A1</h2><span>${pct}%</span></div><div class="progressbar"><span style="width:${pct}%"></span></div>
+ ${units.map((u,i)=>`<div class="card unit" onclick="state.lesson=${i};go('unit')" style="cursor:pointer"><div class="unitnum">${i+1}</div><div><b>${u[0]}</b><small>${u[1]}</small></div><span class="chev">›</span></div>`).join("")}
+ <div class="card"><b>💡 Dica</b><p class="subtitle">Estude um pouco todos os dias. A constância é mais importante que estudar muitas horas de uma vez.</p></div>`);
+}
+function unit(){
+ const i=state.lesson??0; const names=["Simple Present","Pronomes pessoais","There is / There are","Was / Were","Rotina e hábitos","Food & drinks"];
+ shell(`${header("Unidade ${i+1}","course")}<h1 class="title">${units[i][0]}</h1><p class="subtitle">5 tópicos para você aprender passo a passo.</p>
+ ${names.map((n,j)=>`<div class="card" onclick="state.lesson=${j};go('lesson')" style="cursor:pointer"><b>${j+1}. ${n}</b><span class="chev">›</span></div>`).join("")}`);
+}
+function lesson(){
+ const names=["Simple Present","Personal Pronouns","There is / There are","Was / Were","Daily Routine","Food & Drinks"];
+ const name=names[state.lesson??0];
+ let body;
+ if(name==="Simple Present") body=`<h3>O que é?</h3><p>Usamos o <b>Simple Present</b> para falar sobre ações que acontecem no presente, hábitos, verdades gerais e rotinas.</p><h3>Como formar?</h3><ul><li>Afirmativa: sujeito + verbo. Com <b>he/she/it</b>, geralmente acrescentamos <b>-s</b>.</li><li>Negativa: sujeito + don't/doesn't + verbo.</li><li>Interrogativa: Do/Does + sujeito + verbo?</li></ul><div class="example"><b>Exemplos:</b><br>• I work. — Eu trabalho.<br>• She works. — Ela trabalha.<br>• I don't work. — Eu não trabalho.<br>• Does she work? — Ela trabalha?</div>`;
+ else body=`<h3>Aprenda ${name}</h3><p>Esta lição apresenta o conteúdo essencial do A1 com explicações simples, exemplos em inglês americano e tradução.</p><div class="example"><b>Exemplo:</b><br>Practice every day. — Pratique todos os dias.</div><h3>Agora pratique!</h3><p>Depois da explicação, faça exercícios e revise com flashcards.</p>`;
+ shell(`${header(name,"unit")}<div class="tabs"><button class="active">Aprenda</button><button>Exemplos</button><button>Pratique</button><button onclick="go('flash')">Flashcards</button></div><div class="card lesson-text">${body}</div><button class="primary" onclick="go('exercise')">Próximo →</button>`);
+}
+function flash(){
+ const v=vocab[state.flashIndex%vocab.length];
+ shell(`${header("Flashcards")}<div class="tabs"><button class="active">Revisão</button><button>Todos</button></div>
+ <div class="card flash" onclick="this.querySelector('.translation').style.visibility='visible'"><div style="font-size:55px">${v[0]}</div><div class="word">${v[1]}</div><div class="pron">${v[2]}</div><div class="translation" style="visibility:hidden">${v[3]}</div><small style="margin-top:30px;color:var(--muted)">Toque para revelar a tradução</small></div>
+ <div style="display:flex;justify-content:space-between"><button class="secondary" style="width:48%" onclick="state.flashIndex=(state.flashIndex-1+vocab.length)%vocab.length;render()">←</button><button class="primary" style="width:48%" onclick="state.flashIndex=(state.flashIndex+1)%vocab.length;render()">→</button></div>`);
+}
+function vocabulary(){
+ shell(`${header("Vocabulário","course")}<div class="tabs"><button class="active">Lista</button><button onclick="go('flash')">Flashcards</button></div><h2>Comida e objetos</h2>
+ ${vocab.map(v=>`<div class="card vocab-row"><span class="vocab-icon">${v[0]}</span><div><b>${v[1]}</b><small>${v[3]}</small></div><span class="chev">🔊</span></div>`).join("")}`);
+}
+function exercise(){
+ const q=questions[state.completed%questions.length];
+ shell(`${header("Exercícios")}<div class="top"><b>Questão ${(state.completed%questions.length)+1}/10</b><span>${state.completed} concluídas</span></div><div class="progressbar"><span style="width:${((state.completed%10)+1)*10}%"></span></div>
+ <h3 style="margin-top:28px">Escolha a alternativa correta.</h3><div class="card"><b style="font-size:18px">${q.q}</b></div>
+ ${q.a.map((a,i)=>`<button class="option ${state.selected===i?'selected':''}" onclick="state.selected=${i};render()"><b>${String.fromCharCode(65+i)}</b>　${a}</button>`).join("")}
+ <button class="primary" onclick="checkAnswer(${q.c})">Confirmar</button>`);
+}
+function checkAnswer(c){
+ if(state.selected===null){alert("Escolha uma alternativa.");return}
+ if(state.selected===c){state.completed++;state.xp+=10;save();alert("Muito bem! +10 XP 🎉");}
+ else alert("Quase! Revise a explicação e tente novamente.");
+ state.selected=null;render();
+}
+function progress(){
+ const a1=Math.min(100,Math.round(state.completed/30*100));
+ shell(`${header("Meu progresso")}<div class="tabs"><button class="active">Inglês</button><button>A2</button></div>
+ <div class="card"><b>A1</b><div class="top"><span>Unidades concluídas</span><b>${a1}%</b></div><div class="progressbar"><span style="width:${a1}%"></span></div></div>
+ <div class="statgrid"><div class="card stat"><strong>${state.completed}</strong>Exercícios</div><div class="card stat"><strong>${state.xp}</strong>XP</div><div class="card stat"><strong>${vocab.length}</strong>Flashcards</div><div class="card stat"><strong>${state.streak}</strong>Dias de ofensiva</div></div>
+ <button class="primary" onclick="go('achievements')">🏆 Ver conquistas</button><button class="secondary" style="margin-top:10px" onclick="go('profile')">Meu perfil</button>`);
+}
+function achievements(){
+ shell(`${header("Conquistas","progress")}<h2>Suas conquistas</h2>
+ ${[["🏆","Primeira lição","Você começou!"],["🔥","7 dias estudando","Você é incrível!"],["📖","10 lições concluídas","Continue assim!"],["💗","100 palavras aprendidas","Seu vocabulário está crescendo!"],["⭐","A1 concluído","Muito bem!"]].map(x=>`<div class="card achievement"><div class="badge">${x[0]}</div><div><b>${x[1]}</b><small>${x[2]}</small></div></div>`).join("")}`);
+}
+function profile(){
+ shell(`${header("Meu perfil")}<div class="card center"><div class="avatar" style="margin:auto">👩</div><h2>Ash</h2><p class="subtitle">Aprendendo inglês 🇺🇸</p></div>
+ ${["👤 Meu perfil","🇺🇸 Idioma / Nível — Inglês A1","🔔 Notificações","☀️ Tema — Claro","❔ Ajuda","ⓘ Sobre o app"].map(x=>`<div class="profile-row"><span>${x}</span><span class="chev">›</span></div>`).join("")}
+ <div class="notice" style="margin-top:18px">Seus exercícios, XP e progresso são salvos automaticamente no navegador.</div>
+ <button class="secondary" style="margin-top:15px" onclick="localStorage.clear();location.reload()">Redefinir progresso</button>`);
+}
+function start(){
+ app.innerHTML=`<main class="phone"><section class="splash"><div class="big-heart">♥</div><h1>Ash</h1><h2 style="color:var(--pink);margin-top:0">Idiomas</h2><p>Seu próximo idioma<br>está mais perto do que você imagina!</p><button class="primary" onclick="go('home')">Começar</button></section></main>`;
+}
+start();
+
+</script>
+</body>
+</html>
